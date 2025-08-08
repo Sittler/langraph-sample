@@ -61,13 +61,13 @@ export function AppSidebar({ user, menuItems = defaultMenuItems }: AppSidebarPro
           {menuItems.map((item) => (
             <SidebarMenuItem key={item.href}>
               <SidebarMenuButton asChild>
-                <a
+                <Link
                   href={item.href}
                   className="flex items-center gap-3 px-3 py-2 text-sm font-medium rounded-md hover:bg-accent hover:text-accent-foreground"
                 >
                   <item.icon className="h-4 w-4" />
                   {item.title}
-                </a>
+                </Link>
               </SidebarMenuButton>
             </SidebarMenuItem>
           ))}
@@ -93,4 +93,5 @@ export function AppSidebar({ user, menuItems = defaultMenuItems }: AppSidebarPro
     </Sidebar>
   )
 }
+
 
