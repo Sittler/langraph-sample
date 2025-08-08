@@ -1,30 +1,10 @@
 "use client"
 
-import { useState } from "react"
-import { useSession, signOut } from "next-auth/react"
+import { useSession } from "next-auth/react"
 import { useRouter } from "next/navigation"
-import { Button } from "@/components/ui/button"
-import { Avatar, AvatarFallback } from "@/components/ui/avatar"
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuLabel,
-  DropdownMenuSeparator,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu"
-import {
-  Sidebar,
-  SidebarContent,
-  SidebarFooter,
-  SidebarHeader,
-  SidebarMenu,
-  SidebarMenuButton,
-  SidebarMenuItem,
-  SidebarProvider,
-  SidebarTrigger,
-} from "@/components/ui/sidebar"
-import { Home, Settings, User, Menu, LogOut } from "lucide-react"
+import { SidebarProvider } from "@/components/ui/sidebar"
+import { AppSidebar } from "@/components/ui/app-sidebar"
+import { Header } from "@/components/ui/header"
 
 interface DashboardLayoutProps {
   children: React.ReactNode
@@ -185,4 +165,5 @@ export default function DashboardLayout({ children }: DashboardLayoutProps) {
     </SidebarProvider>
   )
 }
+
 
