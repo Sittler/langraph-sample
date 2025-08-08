@@ -115,7 +115,7 @@ export async function authenticateUser(data: LoginInput) {
       return { 
         success: false, 
         error: "Validation failed", 
-        details: error.errors 
+        details: error.issues 
       }
     }
     
@@ -146,4 +146,5 @@ export async function getUserById(id: string) {
     return null
   }
 }
+
 
