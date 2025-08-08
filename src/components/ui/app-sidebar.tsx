@@ -1,5 +1,6 @@
 "use client"
 
+import Link from "next/link"
 import { Avatar, AvatarFallback } from "@/components/ui/avatar"
 import {
   Sidebar,
@@ -92,3 +93,4 @@ export function AppSidebar({ user, menuItems = defaultMenuItems }: AppSidebarPro
     </Sidebar>
   )
 }
+
