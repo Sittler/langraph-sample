@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 
 export default function Home() {
-  const { data: session, status } = useSession()
+  const { status } = useSession()
   const router = useRouter()
 
   useEffect(() => {
@@ -54,5 +54,6 @@ export default function Home() {
     </div>
   )
 }
+
 
 
