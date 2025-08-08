@@ -33,7 +33,7 @@ interface DashboardLayoutProps {
 export default function DashboardLayout({ children }: DashboardLayoutProps) {
   const { data: session, status } = useSession()
   const router = useRouter()
-  const [isSidebarOpen, setIsSidebarOpen] = useState(true)
+  const [isSidebarOpen] = useState(true)
 
   // Redirect to login if not authenticated
   if (status === "loading") {
@@ -185,3 +185,4 @@ export default function DashboardLayout({ children }: DashboardLayoutProps) {
     </SidebarProvider>
   )
 }
+
